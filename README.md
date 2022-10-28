@@ -1,10 +1,9 @@
 # Intelligent Antenatal Care Assistant 
 ### Application of Gradient Boost Regressor
 Inspired by a problem that is common
+<br>
 ![IACA](./static/images/logogreen.png)
-Version 1.0.0
-![IACA](./static/images/whitelogo.png)
-Version 1.0.1
+<br>
 
 Inline with this machine learning regression model, the following was achieved:
 * Integrating ML model into a web application

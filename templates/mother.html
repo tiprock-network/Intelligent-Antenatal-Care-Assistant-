@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+<div class="block1">
+<h1>Delivery Updates</h1>
+<p>The below data is based on {{mother.motherName}}'s hospital records</p>
+</div>
+
+
+
+
+  <div class="cardMother">
+    
+    <p class="main"><strong>Expected date of delivery:</strong> {{mother.birthDate}}</p>
+    <p class="main"><strong>Estimated delivery time:</strong> {{mother.birthTime}}</p>
+    <p>Date of Pregnancy: {{mother.pregDate}}</p>
+    <p>Weight: {{mother.mweight}}</p>
+    <p>Mother BMI: {{mother.bmi}}</p>
+    <p>Blood pressure: {{mother.bpr}}</p>
+  
+  </div>
+
+  <div class="predictionCard">
+     <div class="delInfo">
+        <p><strong>Days for pregnancy:</strong> {{mother.dys}} days</p>
+        <p><strong>Weeks Expected:</strong> {{mother.dys/(7)}} weeks</p>
+     </div>
+     
+     <div class="contInfo">
+      <p><strong>Her name:</strong> {{mother.motherName}}</p>
+      <p><strong>Id:</strong> {{mother.id}}</p>
+      
+      <p><strong>Location :</strong> {{mother.addr}}</p>
+      <p><strong>Phone:</strong> +254{{mother.phone}}</p>
+   </div>
+      
+  </div>
+  
+
+
+{%endblock%}

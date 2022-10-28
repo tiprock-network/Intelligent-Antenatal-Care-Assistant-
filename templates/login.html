@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{%block body%}
+<div class="block3">
+    
+    
+     <form action="" method="POST">
+        <div class="form-section">
+            <label>Username</label>
+            <input type="text" name="username" class="form-part" placeholder="Official name" value={{request.form.username}}>
+         </div>
+
+         <div class="form-section">
+            <label>Password</label>
+            <input type="password" name="password" class="form-part" value={{request.form.password}}>
+         </div>
+
+         <div class="form-section">
+            <label>Verification Code</label>
+            <input type="hospital" name="hospital" class="form-part" placeholder="Name of hospital" value={{request.form.vcode}} >
+         </div>
+
+         <button type="submit" class="btnSub">Sign in</button>
+         <p><a href="/register">Make an account</a></p>
+     </form>
+    
+</div>
+{%endblock%}

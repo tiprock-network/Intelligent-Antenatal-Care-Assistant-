@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+<div class="block1">
+<h1>Hi, {{session.username}}</h1>
+<p>You are now viewing live {{session.hospital}}'s dashboard</p>
+</div>
+
+<div class="btnzone">
+<a href="/add" class="addBtn">Add Mom</a>
+</div>
+
+<div class="block2">
+    {%for mother in mothers%}
+      <div class="card">
+      <p><a href="mother/{{mother.id}}">Id: {{mother.id}}</a></p>
+      <p>Name: {{mother.motherName}}</p>
+      <p>Date of Pregnancy: {{mother.pregDate}}</p>
+      <p>Weight: {{mother.mweight}} kgs</p>
+      <p>Mother BMI: {{mother.bmi}}</p>
+      <p>Blood pressure: {{mother.bpr}}</p>
+      </div>
+      {%endfor%}
+    </div>
+{%endblock%}

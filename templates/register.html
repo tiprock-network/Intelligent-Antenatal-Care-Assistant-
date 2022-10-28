@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+<div class="block1">
+<h1>Hey, </h1>
+<p>Register using this form</p>
+</div>
+
+{%from "includes/_formhelpers.html" import render_field%}
+<form method='POST' action="">
+    <div class="form-section">
+       {{render_field(form.employeename, class_="form-part")}}
+    </div>
+
+    <div class="form-section">
+        {{render_field(form.email, class_="form-part")}}
+     </div>
+
+     <div class="form-section">
+        {{render_field(form.phone_number, class_="form-part")}}
+     </div>
+
+     <div class="form-section">
+        {{render_field(form.hospital, class_="form-part")}}
+     </div>
+
+     <div class="form-section">
+        {{render_field(form.department, class_="form-part")}}
+     </div>
+
+     <div class="form-section">
+        {{render_field(form.position, class_="form-part")}}
+     </div>
+
+     <div class="form-section">
+        {{render_field(form.team, class_="form-part")}}
+     </div>
+
+     <div class="form-section">
+        {{render_field(form.password, class_="form-part")}}
+     </div>
+
+     <div class="form-section">
+        {{render_field(form.confirm, class_="form-part")}}
+     </div>
+
+     <p><input type="submit" value="Sign Up" class="btnSub"></p>
+</form>
+
+<div 
+{%endblock%}

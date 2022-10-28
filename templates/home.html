@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+<div class="block1">
+<h1>Hi, {{session.username}}</h1>
+<p>You are now viewing live {{session.hospital}}'s Home Page</p>
+</div>
+
+<div class="card2">
+    <p>Welcome to the main hospital database. Different predictions for maternal outcomes are housed in this database. This platform is for registered officials.</p>
+    <br>
+<h2 style="color:#333">Choose an option below</h2>
+<div class="bar">
+  <h2><a href="/daily">Delivery Projection</a></h2>
+</div>
+
+</div>
+ 
+<div>
+{%endblock%}

@@ -1,0 +1,18 @@
+<div class="navbar">
+    <img src="{{url_for('static',filename='images/iaca.png')}}" alt>
+    
+    <br>
+    <ul>
+        
+        <li><a href="/"><i class="fa fa-briefcase-medical"></i> Desk</a></li>
+        <li><a href="/daily"><i class="fa fa-person-breastfeeding"></i> Daily Delivery Projection</a></li>
+        
+        {%if session.logged_in%}
+        <li><a href="/dashboard"><i class="fa fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="/logout"><i class="fa fa-key"></i> Log Out</a></li>
+        {%else%}
+        <li><a href="/login"><i class="fa fa-address-card"></i> Account</a></li>
+        {%endif%}
+
+    </ul>
+</div>

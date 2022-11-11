@@ -8,9 +8,9 @@ import pandas as pd
 dataset=pd.read_csv('labourward2.csv')
 dataset.head()
 
-x=np.array(dataset[['BMI','momWeight/10']])
+x=np.array(dataset[['BMIScaled','momWeight/10']])
 
-y=np.array(dataset['days'])
+y=np.array(dataset['daysScaled'])
 
 train_x,test_x,train_y,test_y=train_test_split(x,y,test_size=0.3,random_state=1)
 
@@ -33,4 +33,4 @@ def predDays(bmi,weight):
 
   #error=MSE(test_y,y_hat)**0.5 #numebr of days that can be before or after
   
-  return pred[0]*10
+  return pred[0]*100

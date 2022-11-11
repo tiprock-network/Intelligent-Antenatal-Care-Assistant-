@@ -1,6 +1,5 @@
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error as MSE
 import numpy as np
 import pandas as pd
 import math
@@ -10,7 +9,7 @@ dataset.head()
 
 x=np.array(dataset[['BMIScaled','momWeight/10']])
 
-y=np.array(dataset['timeValueinHrs'])
+y=np.array(dataset['timeScaled'])
 
 train_x,test_x,train_y,test_y=train_test_split(x,y,test_size=0.3,random_state=1)
 
@@ -33,8 +32,8 @@ def timePred(bmi,w):
     param=np.array([inputs])
     pred=gbr_model.predict(param)
 
-    m=(round((pred[0]-int(pred[0]))*60,0))/100
-    h=math.trunc(pred[0])
+    m=(round((pred[0]*10-int(pred[0]*10))*60,0))/100
+    h=math.trunc(pred[0]*10)
     time=m+h
     
     if time>0.0 and time<12.0:

@@ -8,16 +8,20 @@ from data import Mothers
 from birthpredictionDays import predDays
 from birthpredictionmodel import timePred
 from functools import wraps
+import mysql.connector
+from mysql.connector import errorcode
 
 #instantiate Flask class 
 app=Flask(__name__)
 
 #configure database (MYSQL)
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='Dim)YxKK(ahtr2R'
+
+app.config['MYSQL_HOST']='appdev.cjqpzayqgcyy.us-east-2.rds.amazonaws.com' #localhost
+app.config['MYSQL_USER']='lincoln' #root
+app.config['MYSQL_PASSWORD']='ford36A88' #Dim)YxKK(ahtr2R
 app.config['MYSQL_DB']='iaca'
 app.config['MYSQL_CURSORCLASS']='DictCursor'
+
 
 #initialize mysql
 mysql=MySQL(app)

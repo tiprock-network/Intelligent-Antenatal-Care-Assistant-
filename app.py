@@ -4,9 +4,9 @@ from flask import Flask, jsonify,render_template,flash,redirect, template_render
 from wtforms import Form,StringField,TextAreaField,PasswordField,validators
 from flask_mysqldb import MySQL
 from passlib.hash import sha256_crypt
-from data import Mothers
-from birthpredictionDays import predDays
-from birthpredictionmodel import timePred
+from MLmodels.data import Mothers
+from MLmodels.birthpredictionDays import predDays
+from MLmodels.birthpredictionmodel import timePred
 from functools import wraps
 import mysql.connector
 from mysql.connector import errorcode

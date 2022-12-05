@@ -1,0 +1,8 @@
+flask
+flask-msqldb
+mysql-connector-python
+Flask-WTF
+passlib
+pandas
+numpy
+scikit-learn

@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'iaca'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1EFF65773F684A9C9B6D84A69F6A1BE2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5671A35A9A00449296E034A42B42C421 }}
